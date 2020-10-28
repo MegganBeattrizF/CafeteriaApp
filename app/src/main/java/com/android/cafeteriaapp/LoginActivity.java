@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
     Button btnSignIn, btnSignUp;
+    TextView txtRecoverPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     private void initializeComponents() {
         btnSignIn = findViewById(R.id.button_sign_in_confirm);
         btnSignUp = findViewById(R.id.button_sign_up_actv);
+        txtRecoverPassword = findViewById(R.id.textView_recoverPassword);
     }
 
     private void callbacksToActivity(){
@@ -39,6 +42,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),SignUpActivity.class));
+                finish();
+            }
+        });
+
+        txtRecoverPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),RecoverPasswordActivity.class));
                 finish();
             }
         });
