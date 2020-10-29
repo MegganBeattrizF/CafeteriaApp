@@ -9,10 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RecoverPasswordActivity"></activity>
+        <activity android:name=".ChangePasswordActivity"
+            android:theme="@style/ActivityWithColor"></activity>
+        <activity
+            android:name=".RecoverEmailCodeActivity"
+            android:theme="@style/ActivityWithColor" />
+        <activity
+            android:name=".RecoverPasswordActivity"
+            android:theme="@style/ActivityWithColor" />
         <activity
             android:name=".SignUpActivity"
-            android:theme="@style/ActivityWithColor"></activity>
+            android:theme="@style/ActivityWithColor" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".ApresentationActivity">
             <intent-filter>
